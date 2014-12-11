@@ -36,7 +36,8 @@ var Bar = React.createClass({
 var XAxis = React.createClass({
 
 
-  componentWillReceiveProps: function(props) {
+  componentDidMount: function() {
+    var props = this.props;
 
     var xAxis = d3.svg.axis()
       .scale(props.xScale)
@@ -80,7 +81,8 @@ var XAxis = React.createClass({
 
 var YAxis = React.createClass({
 
-  componentWillReceiveProps: function(props) {
+  componentDidMount: function(props) {
+    var props = this.props;
 
     var yAxis = d3.svg.axis()
       .ticks(props.yAxisTickCount)
